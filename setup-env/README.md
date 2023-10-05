@@ -41,3 +41,16 @@ LOCAL = "" #ex. us-central1
 import vertexai
 vertexai.init(project=PROJECT_ID, location=LOCATION)
 ```
+## Configurando um ambiente virtual
+```
+export env=py310 && \
+python -m venv $env && \
+source $env/bin/activate && \
+pip install ipykernel && \
+python -m ipykernel install --user --name $env --display-name "$env"
+```
+
+### instalando todas as dependências
+```
+pip install -r requirements.txt
+```
